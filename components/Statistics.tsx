@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AnimatedSection from "./AnimatedSection";
 
 function useInView<T extends HTMLElement>() {
@@ -39,6 +39,37 @@ function useCountUp(target: number, start: boolean, durationMs = 1200) {
   return value;
 }
 
+interface StatItemProps {
+  target: number;
+  suffix: string;
+  label: string;
+  description: string;
+  inView: boolean;
+  delay: number;
+  index: number;
+}
+
+function StatItem({ target, suffix, label, description, inView, delay, index }: StatItemProps) {
+  const val = useCountUp(target, inView, 1200 + index * 200);
+
+  return (
+    <AnimatedSection delay={delay}>
+      <div className="text-center">
+        <div className="text-3xl md:text-5xl font-extrabold text-primary mb-2">
+          {val}
+          {suffix}
+        </div>
+        <div className="text-lg md:text-xl font-bold text-foreground mb-1">
+          {label}
+        </div>
+        <div className="text-sm text-muted-foreground">
+          {description}
+        </div>
+      </div>
+    </AnimatedSection>
+  );
+}
+
 export default function Statistics() {
   const stats = [
     {
@@ -63,38 +94,29 @@ export default function Statistics() {
     }
   ];
 
-  const parsed = useMemo(() =>
-    stats.map((s) => {
-      const match = s.number.match(/\d+/);
-      const suffix = s.number.replace(/\d+/g, "");
-      return { target: match ? parseInt(match[0], 10) : 0, suffix, ...s };
-    }),
-  []);
-
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
     <section className="brut-container mt-10">
-      <div ref={ref} className="md-card md-elevation-2 p-6 md:p-10">
-        <h2 className="text-center mb-8">Naše statistike</h2>
+      <div ref={ref} className="modern-card modern-elevation-2 p-6 md:p-10">
+        <h2 className="gradient-text text-center mb-8">Naše statistike</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {parsed.map((stat, index) => {
-            const val = useCountUp(stat.target, inView, 1200 + index * 200);
+          {stats.map((stat, index) => {
+            const match = stat.number.match(/\d+/);
+            const suffix = stat.number.replace(/\d+/g, "");
+            const target = match ? parseInt(match[0], 10) : 0;
+
             return (
-            <AnimatedSection key={index} delay={index * 0.05}>
-            <div className="text-center">
-              <div className="text-3xl md:text-5xl font-extrabold text-primary mb-2">
-                {val}
-                {stat.suffix}
-              </div>
-              <div className="text-lg md:text-xl font-bold text-foreground mb-1">
-                {stat.label}
-              </div>
-              <div className="text-sm text-muted-foreground">
-                {stat.description}
-              </div>
-            </div>
-            </AnimatedSection>
+              <StatItem
+                key={index}
+                target={target}
+                suffix={suffix}
+                label={stat.label}
+                description={stat.description}
+                inView={inView}
+                delay={index * 0.05}
+                index={index}
+              />
             );
           })}
         </div>

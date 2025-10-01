@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import AnimatedSection from "./AnimatedSection";
 import { motion } from "framer-motion";
 
 export default function CTASection() {
@@ -20,7 +19,7 @@ export default function CTASection() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              TRUBAČI "ZLATNE TRUBE"
+              TRUBAČI &quot;ZLATNE TRUBE&quot;
             </motion.h3>
             <motion.p
               className="text-xl md:text-3xl font-bold mt-3"

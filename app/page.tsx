@@ -1,7 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import CelebrationsSection from "@/components/CelebrationsSection";
-import VideoSection from "@/components/VideoSection";
 import GallerySection from "@/components/GallerySection";
 import Testimonials from "@/components/Testimonials";
 import Statistics from "@/components/Statistics";

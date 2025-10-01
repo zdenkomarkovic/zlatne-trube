@@ -1,7 +1,6 @@
 "use client";
 import { useMemo } from "react";
 import AnimatedSection from "./AnimatedSection";
-import Image from "next/image";
 
 type Testimonial = {
   name: string;
@@ -84,31 +83,39 @@ export default function Testimonials() {
   return (
     <section className="brut-container mt-10">
       <AnimatedSection>
-      <div className="md-card md-elevation-1 p-6 md:p-10">
-        <h2>Utisci i preporuke</h2>
-        <div className="grid md:grid-cols-3 gap-4 mt-6">
-          {items.map((t, i) => (
-            <AnimatedSection key={t.name} delay={i * 0.05}>
-            <article className="md-card md-elevation-1 p-5">
-              <div className="flex items-center gap-3">
-                <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
-                  {t.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                </div>
-                <div>
-                  <div className="font-bold text-foreground">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.location}</div>
-                  <Stars rating={t.rating} />
-                </div>
-              </div>
-              <p className="leading-relaxed mt-4">“{t.content}”</p>
-            </article>
-            </AnimatedSection>
-          ))}
+        <div className="md-card md-elevation-1 p-6 md:p-10">
+          <h2>Utisci i preporuke</h2>
+          <div className="grid md:grid-cols-3 gap-4 mt-6">
+            {items.map((t, i) => (
+              <AnimatedSection key={t.name} delay={i * 0.05}>
+                <article className="md-card md-elevation-1 p-5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
+                      {t.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")
+                        .slice(0, 2)}
+                    </div>
+                    <div>
+                      <div className="font-bold text-foreground">{t.name}</div>
+                      <div className="text-xs text-muted-foreground">
+                        {t.location}
+                      </div>
+                      <Stars rating={t.rating} />
+                    </div>
+                  </div>
+                  <p className="leading-relaxed mt-4">“{t.content}”</p>
+                </article>
+              </AnimatedSection>
+            ))}
+          </div>
+          <div className="flex justify-center mt-8">
+            <a href="#kontakt" className="md-btn">
+              Pogledaj još utisaka
+            </a>
+          </div>
         </div>
-        <div className="flex justify-center mt-8">
-          <a href="#kontakt" className="md-btn">Pogledaj još utisaka</a>
-        </div>
-      </div>
       </AnimatedSection>
     </section>
   );
@@ -134,5 +141,3 @@ function Stars({ rating }: { rating: number }) {
     </div>
   );
 }
-
-

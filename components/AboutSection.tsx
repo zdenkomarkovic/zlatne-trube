@@ -9,7 +9,7 @@ export default function AboutSection() {
             Trubači za svadbe, rođendane i sve vrste proslava
           </h2>
           <p className="text-muted-foreground">
-            Trubači "ZLATNE TRUBE" donose{" "}
+            Trubači &quot;ZLATNE TRUBE&quot; donose{" "}
             <strong className="text-foreground">vrhunsku energiju</strong> i
             autentični duh balkanske muzike na svaku proslavu. Naš orkestar je
             poznat po snažnom zvuku, tačnom tempu i modernoj izvedbi

@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import heroImg from "../public/optimized/IMG-94104329a11c00a619019db369c7181b-V.webp";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
@@ -27,7 +26,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h1 className="text-4xl md:text-7xl font-black uppercase leading-tight gradient-text mb-2 md:mb-4 drop-shadow-2xl">
-              🎺 TRUBAČI "ZLATNE TRUBE" 🎺
+              🎺 TRUBAČI &quot;ZLATNE TRUBE&quot; 🎺
             </h1>
             <p className="text-xl md:text-3xl font-bold mt-3 text-white drop-shadow-lg">
               Najbolja trubačka muzika za svadbe, rođendane i proslave.
