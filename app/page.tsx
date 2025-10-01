@@ -6,6 +6,7 @@ import Testimonials from "@/components/Testimonials";
 import Statistics from "@/components/Statistics";
 import LocationsSection from "@/components/LocationsSection";
 import CTASection from "@/components/CTASection";
+import BlogSection from "@/components/BlogSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <GallerySection />
       <Testimonials />
       <Statistics />
+      <BlogSection />
       <LocationsSection />
     </main>
   );
