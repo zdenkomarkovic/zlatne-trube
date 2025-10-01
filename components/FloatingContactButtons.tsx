@@ -4,7 +4,7 @@ import { Phone } from "lucide-react";
 
 export default function FloatingContactButtons() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 ">
+    <div className="fixed bottom-0 left-0 right-0 z-50 pb-1 ">
       <div className="brut-container py-1">
         <div className="flex gap-2 md:gap-4 justify-center">
           <Link
