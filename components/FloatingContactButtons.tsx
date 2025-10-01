@@ -14,7 +14,7 @@ export default function FloatingContactButtons() {
             <Phone size={20} />
             <span className="text-xs md:text-lg">Pozovi</span>
           </Link>
-          <Link
+          <a
             href="viber://chat?number=%2B381639662325"
             className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 rounded-full px-2 md:px-4 py-1 md:py-2 font-bold text-white bg-gradient-to-r from-purple-600 to-purple-500 border-2 border-purple-400/30 shadow-lg hover:shadow-[0_0_25px_rgba(147,51,234,0.5)] transition-all hover:scale-105"
           >
@@ -22,7 +22,7 @@ export default function FloatingContactButtons() {
               <path d="M12.002 0C5.375 0 0 5.373 0 12c0 2.125.555 4.114 1.527 5.846L0 24l6.304-1.654A11.946 11.946 0 0012.002 24C18.627 24 24 18.627 24 12S18.627 0 12.002 0zm5.924 17.171c-.294.826-.866 1.393-1.693 1.693-1.586.574-5.413.133-7.571-1.567-1.742-1.372-2.96-3.389-3.05-3.537-.089-.148-1.319-1.753-1.319-3.345 0-1.591.835-2.374 1.131-2.698.296-.323.647-.404.863-.404.216 0 .432.002.62.011.199.01.466-.075.728.556.263.631.896 2.184.975 2.343.079.158.131.344.027.544-.105.201-.158.325-.315.501-.158.176-.331.394-.473.53-.158.157-.322.326-.138.639.183.314.817 1.344 1.753 2.178 1.206.996 2.223 1.307 2.537 1.454.314.148.498.124.682-.075.184-.199.79-.921.998-1.237.209-.315.418-.263.705-.158.287.105 1.822.859 2.135 1.016.314.158.523.236.598.367.075.131.075.754-.219 1.58z" />
             </svg>
             <span className="text-xs md:text-lg">Viber</span>
-          </Link>
+          </a>
           <Link
             href="https://wa.me/381639662325"
             target="_blank"
