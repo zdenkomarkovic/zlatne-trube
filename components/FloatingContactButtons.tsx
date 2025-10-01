@@ -15,7 +15,7 @@ export default function FloatingContactButtons() {
             <span className="text-xs md:text-lg">Pozovi</span>
           </Link>
           <Link
-            href="viber://chat?number=+381639662325"
+            href="viber://chat?number=381639662325"
             className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 rounded-full px-2 md:px-4 py-1 md:py-2 font-bold text-white bg-gradient-to-r from-purple-600 to-purple-500 border-2 border-purple-400/30 shadow-lg hover:shadow-[0_0_25px_rgba(147,51,234,0.5)] transition-all hover:scale-105"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
