@@ -43,7 +43,7 @@ export default async function BlogSection() {
           <AnimatedSection key={post._id}>
             {" "}
             <Link href={`/blog/${post.slug.current}`} className="group block">
-              <article className="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+              <article className="border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transform transition-transform duration-500">
                 {post.mainImage && (
                   <div className="relative w-full h-48">
                     <Image

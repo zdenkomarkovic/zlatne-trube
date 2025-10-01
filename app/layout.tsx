@@ -77,11 +77,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased bg-background text-foreground text-base md:text-lg font-sans`}
       >
-        <Header />
         {children}
-        <FloatingContactButtons />
-        <ButtonToTop />
-        <Footer />
         {/* JSON-LD */}
         <script
           type="application/ld+json"

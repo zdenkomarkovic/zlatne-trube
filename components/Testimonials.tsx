@@ -110,11 +110,6 @@ export default function Testimonials() {
               </AnimatedSection>
             ))}
           </div>
-          <div className="flex justify-center mt-8">
-            <a href="#kontakt" className="md-btn">
-              Pogledaj još utisaka
-            </a>
-          </div>
         </div>
       </AnimatedSection>
     </section>
