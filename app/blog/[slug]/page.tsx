@@ -6,8 +6,16 @@ import Link from "@/node_modules/next/link";
 
 interface Post {
   title: string;
-  mainImage?: any;
-  body: any;
+  mainImage?: {
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+  };
+  body: Array<{
+    _type: string;
+    [key: string]: unknown;
+  }>;
   publishedAt: string;
 }
 

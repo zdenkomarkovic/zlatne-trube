@@ -8,7 +8,12 @@ interface Post {
   _id: string;
   title: string;
   slug: { current: string };
-  mainImage?: any;
+  mainImage?: {
+    asset: {
+      _ref: string;
+      _type: string;
+    };
+  };
   excerpt?: string;
   publishedAt?: string;
 }
