@@ -103,7 +103,7 @@ export default function Header() {
           />
         </Link>
         <DesktopNav />
-        <Link href="tel:+381639662325">
+        <Link href="tel:+381629662325">
           <motion.button
             whileHover={{
               scale: 1.05,
@@ -111,7 +111,7 @@ export default function Header() {
             className="items-center justify-center rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground border-2 border-primary/30 text-sm md:text-lg py-2 px-4 md:py-3 md:px-6 transition-all flex font-bold shadow-lg hover:shadow-[0_0_25px_rgba(255,165,0,0.5)]"
           >
             <PhoneIcon className="mr-2" />
-            <p>063-966-23-25</p>
+            <p>062-966-23-25</p>
           </motion.button>
         </Link>
         <MobileMenu />

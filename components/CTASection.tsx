@@ -41,8 +41,8 @@ export default function CTASection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <Link href="tel:+381639662325" className="modern-btn glow-effect">
-                📞 Pozovi: 063-966-23-25
+              <Link href="tel:+381629662325" className="modern-btn glow-effect">
+                📞 Pozovi: 062-966-23-25
               </Link>
             </motion.div>
           </motion.div>

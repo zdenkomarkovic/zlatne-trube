@@ -8,14 +8,14 @@ export default function FloatingContactButtons() {
       <div className="brut-container py-1">
         <div className="flex gap-2 md:gap-4 justify-center">
           <Link
-            href="tel:+381639662325"
+            href="tel:+381629662325"
             className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 rounded-full px-2 md:px-4 py-1 md:py-2 font-bold text-white bg-gradient-to-r from-primary to-accent border-2 border-primary/30 shadow-lg hover:shadow-[0_0_25px_rgba(255,165,0,0.5)] transition-all hover:scale-105"
           >
             <Phone size={20} />
             <span className="text-xs md:text-lg">Pozovi</span>
           </Link>
           <a
-            href="viber://chat?number=%2B381639662325"
+            href="viber://chat?number=%2B381629662325"
             className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 rounded-full px-2 md:px-4 py-1 md:py-2 font-bold text-white bg-gradient-to-r from-purple-600 to-purple-500 border-2 border-purple-400/30 shadow-lg hover:shadow-[0_0_25px_rgba(147,51,234,0.5)] transition-all hover:scale-105"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -24,7 +24,7 @@ export default function FloatingContactButtons() {
             <span className="text-xs md:text-lg">Viber</span>
           </a>
           <Link
-            href="https://wa.me/381639662325"
+            href="https://wa.me/381629662325"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 rounded-full px-2 md:px-4 py-1 md:py-2 font-bold text-white bg-gradient-to-r from-green-600 to-green-500 border-2 border-green-400/30 shadow-lg hover:shadow-[0_0_25px_rgba(34,197,94,0.5)] transition-all hover:scale-105"
