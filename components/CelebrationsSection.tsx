@@ -46,91 +46,89 @@ export default function CelebrationsSection() {
 
   return (
     <section id="usluge" className="brut-container mt-16 mb-8">
-      <AnimatedSection>
-        <div className="modern-card modern-elevation-2 p-8 md:p-12">
-          <h2 className="gradient-text">Vrste slavlja koje sviramo</h2>
-          <p className="mt-6 text-base md:text-xl leading-relaxed text-muted-foreground">
-            Specijalizovani smo za{" "}
-            <strong className="text-foreground">svadbe</strong> (građansko i
-            crkveno venčanje, doček mladenaca, prvi ples, kolo, iznošenje
-            torte), <strong className="text-foreground">rođendane</strong> (od
-            intimnih okupljanja do velikih žurki),
-            <strong className="text-foreground"> krštenja</strong>,{" "}
-            <strong className="text-foreground">
-              momačke i devojačke večeri
-            </strong>
-            , <strong className="text-foreground">korporativne događaje</strong>{" "}
-            (kokteli, team building, novogodišnje zabave),{" "}
-            <strong className="text-foreground">
-              festivale i gradske proslave
-            </strong>
-            , kao i svirke u
-            <strong className="text-foreground"> restoranima i kafanama</strong>
-            . Program prilagođavamo planu protokola i publici – od svečanog do
-            eksplozivno zabavnog. Uz nas, vaša proslava dobija vrhunac energije
-            i emocije koje se pamte.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6 mt-10 ">
-            {celebrations.map((item, i) => (
-              <AnimatedSection key={item.title} delay={i * 0.05}>
-                <div className="modern-card modern-elevation-1 p-6 group hover:scale-105 transition-transform duration-300 h-full">
-                  <div className="text-5xl text-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {item.emoji}
-                  </div>
-                  <h3 className="text-xl md:text-2xl font-extrabold text-center mb-4">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm md:text-base text-center leading-relaxed text-muted-foreground">
-                    {item.desc}
-                  </p>
+      <div className="modern-card modern-elevation-2 p-4 md:p-12">
+        <h2 className="gradient-text">Vrste slavlja koje sviramo</h2>
+        <p className="mt-6 text-base md:text-xl leading-relaxed text-muted-foreground">
+          Specijalizovani smo za{" "}
+          <strong className="text-foreground">svadbe</strong> (građansko i
+          crkveno venčanje, doček mladenaca, prvi ples, kolo, iznošenje torte),{" "}
+          <strong className="text-foreground">rođendane</strong> (od intimnih
+          okupljanja do velikih žurki),
+          <strong className="text-foreground"> krštenja</strong>,{" "}
+          <strong className="text-foreground">
+            momačke i devojačke večeri
+          </strong>
+          , <strong className="text-foreground">korporativne događaje</strong>{" "}
+          (kokteli, team building, novogodišnje zabave),{" "}
+          <strong className="text-foreground">
+            festivale i gradske proslave
+          </strong>
+          , kao i svirke u
+          <strong className="text-foreground"> restoranima i kafanama</strong>.
+          Program prilagođavamo planu protokola i publici – od svečanog do
+          eksplozivno zabavnog. Uz nas, vaša proslava dobija vrhunac energije i
+          emocije koje se pamte.
+        </p>
+        <div className="grid md:grid-cols-3 gap-6 mt-10 ">
+          {celebrations.map((item, i) => (
+            <AnimatedSection key={item.title} delay={i * 0.05}>
+              <div className="modern-card modern-elevation-1 p-6 group hover:scale-105 transition-transform duration-300 h-full">
+                <div className="text-5xl text-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {item.emoji}
                 </div>
-              </AnimatedSection>
-            ))}
-            {images.map((src, idx) => (
-              <AnimatedSection key={idx} delay={idx * 0.04}>
+                <h3 className="text-xl md:text-2xl font-extrabold text-center mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-sm md:text-base text-center leading-relaxed text-muted-foreground">
+                  {item.desc}
+                </p>
+              </div>
+            </AnimatedSection>
+          ))}
+          {images.map((src, idx) => (
+            <AnimatedSection key={idx} delay={idx * 0.04}>
+              <div
+                className="relative overflow-hidden rounded-2xl group cursor-pointer h-full"
+                onMouseEnter={() => setHoveredIndex(idx)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
                 <div
-                  className="relative overflow-hidden rounded-2xl group cursor-pointer h-full"
-                  onMouseEnter={() => setHoveredIndex(idx)}
-                  onMouseLeave={() => setHoveredIndex(null)}
+                  className={`relative transition-transform duration-500 h-full ${
+                    hoveredIndex === idx ? "scale-110" : "scale-100"
+                  }`}
                 >
-                  <div
-                    className={`relative transition-transform duration-500 h-full ${
-                      hoveredIndex === idx ? "scale-110" : "scale-100"
-                    }`}
-                  >
-                    <Image
-                      src={src}
-                      alt="Zlatne Trube nastup"
-                      width={800}
-                      height={800}
-                      className="w-full h-full  object-cover"
-                      unoptimized
-                    />
-                  </div>
-                  {/* Gradient overlay on hover */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-t from-black/70 via-orange-900/20 to-transparent transition-opacity duration-500 ${
-                      hoveredIndex === idx ? "opacity-100" : "opacity-0"
-                    }`}
-                  >
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center font-semibold transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                      🎺 Zlatne Trube
-                    </div>
-                  </div>
-                  {/* Glow border effect */}
-                  <div
-                    className={`absolute inset-0 rounded-2xl transition-all duration-500 ${
-                      hoveredIndex === idx
-                        ? "shadow-[0_0_30px_rgba(255,165,0,0.6)]"
-                        : ""
-                    }`}
+                  <Image
+                    src={src}
+                    alt="Zlatne Trube nastup"
+                    width={800}
+                    height={800}
+                    className="w-full h-full  object-cover"
+                    unoptimized
                   />
                 </div>
-              </AnimatedSection>
-            ))}
-          </div>
+                {/* Gradient overlay on hover */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t from-black/70 via-orange-900/20 to-transparent transition-opacity duration-500 ${
+                    hoveredIndex === idx ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center font-semibold transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    🎺 Zlatne Trube
+                  </div>
+                </div>
+                {/* Glow border effect */}
+                <div
+                  className={`absolute inset-0 rounded-2xl transition-all duration-500 ${
+                    hoveredIndex === idx
+                      ? "shadow-[0_0_30px_rgba(255,165,0,0.6)]"
+                      : ""
+                  }`}
+                />
+              </div>
+            </AnimatedSection>
+          ))}
         </div>
-      </AnimatedSection>
+      </div>
     </section>
   );
 }
