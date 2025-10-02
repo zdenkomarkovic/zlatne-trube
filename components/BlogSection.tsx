@@ -27,7 +27,11 @@ async function getPosts(): Promise<Post[]> {
       mainImage,
       excerpt,
       publishedAt
-    }`
+    }`,
+    {},
+    {
+      next: { revalidate: 60 } // Revalidacija svakih 60 sekundi
+    }
   );
   return posts;
 }
