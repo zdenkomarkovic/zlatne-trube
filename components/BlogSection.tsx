@@ -30,7 +30,7 @@ async function getPosts(): Promise<Post[]> {
     }`,
     {},
     {
-      next: { revalidate: 60 } // Revalidacija svakih 60 sekundi
+      next: { revalidate: 60 }, // Revalidacija svakih 60 sekundi
     }
   );
   return posts;
@@ -46,18 +46,11 @@ export default async function BlogSection() {
         {posts.map((post) => (
           <AnimatedSection key={post._id}>
             {" "}
-            <Link href={`/blog/${post.slug.current}`} className="group block">
-              <article className="border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transform transition-transform duration-500">
-                {post.mainImage && (
-                  <div className="relative w-full h-48">
-                    <Image
-                      src={urlFor(post.mainImage).width(400).height(300).url()}
-                      alt={post.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                )}
+            <Link
+              href={`/blog/${post.slug.current}`}
+              className="group block h-full"
+            >
+              <article className="border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transform transition-transform duration-500 h-full">
                 <div className="p-6">
                   <h2 className="text-2xl font-semibold mb-2 group-hover:text-primary transition-colors">
                     {post.title}
