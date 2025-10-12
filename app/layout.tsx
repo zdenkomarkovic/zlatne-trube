@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     "Zlatne Trube",
   ],
   alternates: {
-    canonical: "https://zlatne-trube.rs/",
+    canonical: "https://trubacikontakt.com/",
   },
   openGraph: {
     type: "website",
     locale: "sr_RS",
-    url: "https://zlatne-trube.rs/",
+    url: "https://trubacikontakt.com/",
     siteName: "ZLATNE TRUBE",
     title: "Trubači ZLATNE TRUBE | Najbolja trubačka muzika za proslave",
     description:
