@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import GoogleAnalyticsComponent from "@/components/GoogleAnalytics";
 
 const poppins = Poppins({
   weight: ["400", "600", "700", "800", "900"],
@@ -73,6 +74,9 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased bg-background text-foreground text-base md:text-lg font-sans`}
       >
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalyticsComponent gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
         {children}
         {/* JSON-LD */}
         <script
