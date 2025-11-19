@@ -4,7 +4,6 @@ import CelebrationsSection from "@/components/CelebrationsSection";
 import GallerySection from "@/components/GallerySection";
 import Testimonials from "@/components/Testimonials";
 import Statistics from "@/components/Statistics";
-import LocationsSection from "@/components/LocationsSection";
 import CTASection from "@/components/CTASection";
 import BlogSection from "@/components/BlogSection";
 
@@ -19,7 +18,6 @@ export default function Home() {
       <Testimonials />
       <Statistics />
       <BlogSection />
-      <LocationsSection />
     </main>
   );
 }
