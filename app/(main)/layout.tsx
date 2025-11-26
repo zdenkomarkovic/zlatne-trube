@@ -3,13 +3,12 @@
 // import Header from "@/components/Header";
 // import FloatingContactButtons from "@/components/FloatingContactButtons";
 
-export default function MainLayout(
-  {
-    // children,
-  }: {
-    // children: React.ReactNode;
-  }
-) {
+export default function MainLayout() {
+// {
+//   children,
+// }: {
+//   children: React.ReactNode;
+// }
   return (
     <>
       {/* <Header /> */}
